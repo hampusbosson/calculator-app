@@ -1,0 +1,132 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: cyan;
+}
+
+.container {
+    display: flex;
+    flex: 1; 
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px; 
+    height: 610px; 
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: rgb(0, 103, 103);
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+    width: 355px; 
+    height: 120px; 
+    border: 2px solid black; 
+    margin-top: 22.5px;
+    border-radius: 7px;
+    background-color: rgba(216, 216, 216, 0.863);
+}
+
+.display-last {
+    font-size: 20px;
+    margin-bottom: 12px;
+    margin-right: 20px;
+
+}
+
+.display-current {
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.clear-n-delete {
+    display: flex;
+    flex-direction: row;
+    margin-top: 22.5px;
+    gap: 15px; 
+}
+
+.clear, .delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 172px;
+    height: 77px; 
+    border: 2px solid black;
+    border-radius: 7px;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.clear {
+    background-color: lightcoral;
+}
+
+.clear:active {
+    background-color: rgb(123, 65, 65);
+}
+
+.delete {
+    background-color: #aaf;
+}
+
+.delete:active {
+    background-color: rgb(96, 96, 147);
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; 
+    margin-top: 15px;
+    margin-bottom: 22.5px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 78px;
+    height: 69px; 
+    border: 2px solid black; 
+    border-radius: 7px; 
+    font-size: 20px;
+    background-color: rgba(216, 216, 216, 0.863);
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.button:active {
+    background-color: rgba(116, 116, 116, 0.863);
+}
+
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
