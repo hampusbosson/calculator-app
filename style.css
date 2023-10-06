@@ -103,7 +103,7 @@ body {
     margin-bottom: 22.5px;
 }
 
-.button {
+.button, .operator, .equals {
     display: flex;
     justify-content: center;
     align-items: center;
