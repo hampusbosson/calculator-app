@@ -14,7 +14,7 @@ const equalsButton = document.querySelector('.equals');
 const clearButton = document.querySelector('.clear');
 const deleteButton = document.querySelector('.delete');
 
-//clearButton.addEventListener('click', clearDisplay());
+clearButton.addEventListener('click', () => clearDisplay());
 
 deleteButton.addEventListener('click', () => deleteNumber());
 
@@ -95,7 +95,16 @@ function deleteNumber() {
     currentOperation.textContent = currentText.slice(0, -1);
 }
 
-
+function clearDisplay() {
+    lastOperation.textContent = ''; 
+    currentOperation.textContent = ''; 
+    firstNum = 0;
+    currentNum = 0;
+    currentOperator = ''; 
+    result = '';
+    shouldResetScreen = false; 
+    evaluatePressed = false; 
+}
 
 
 function add(num1, num2) {
