@@ -14,6 +14,8 @@ const equalsButton = document.querySelector('.equals');
 const clearButton = document.querySelector('.clear');
 const deleteButton = document.querySelector('.delete');
 
+window.addEventListener('keydown', handleKeyboardInput)
+
 clearButton.addEventListener('click', () => clearDisplay());
 
 deleteButton.addEventListener('click', () => deleteNumber());
@@ -105,6 +107,23 @@ function clearDisplay() {
     shouldResetScreen = false; 
     evaluatePressed = false; 
 }
+
+function handleKeyboardInput(e) {
+    if (e.key >= 0 && e.key <= 9) displayNumbers(e.key)
+    if (e.key === '.') displayNumbers(e.key)
+    if (e.key === '=' || e.key === 'Enter') evaluate()
+    if (e.key === 'Backspace') deleteNumber()
+    if (e.key === 'Escape') clearDisplay()
+    if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/')
+      setOperation(convertOperator(e.key))
+  }
+
+  function convertOperator(keyboardOperator) {
+    if (keyboardOperator === '/') return '÷'
+    if (keyboardOperator === '*') return '×'
+    if (keyboardOperator === '-') return '-'
+    if (keyboardOperator === '+') return '+'
+  }
 
 
 function add(num1, num2) {
