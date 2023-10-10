@@ -16,7 +16,7 @@ const deleteButton = document.querySelector('.delete');
 
 //clearButton.addEventListener('click', clearDisplay());
 
-//deleteButton.addEventListener('click', deleteNumber());
+deleteButton.addEventListener('click', () => deleteNumber());
 
 equalsButton.addEventListener('click', () => evaluate());
 
@@ -88,6 +88,11 @@ function currentNumValue() {
         let num = parseFloat(currentOperation.textContent);
         return num; 
     }
+}
+
+function deleteNumber() {
+    let currentText = currentOperation.textContent;
+    currentOperation.textContent = currentText.slice(0, -1);
 }
 
 
